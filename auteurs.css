@@ -1,0 +1,95 @@
+/*Olivier Hassaoui-St-Amour et Stephanie Larocque*/
+
+body {
+    font-family:sans-serif;
+}
+
+.titre {
+    color: blue;
+    font-size:48px;
+    text-decoration:none;
+}
+
+.soustitre{
+    color: blue;
+    font-size:24px;
+}
+
+nav{
+    width : 10%;
+}
+
+nav li{
+    display:block;
+    margin:5px;
+    padding:10px;
+    width:70%;
+    background-color: red;
+    text-align:center;
+}
+nav ul{
+	padding-left:0px;
+}
+
+nav li a{
+    text-decoration: none;
+    color:white;
+}
+
+
+.photo{
+    width:300px;
+    margin:10px;
+}
+
+.all{
+    display:flex;
+    padding-bottom:25px;
+    min-height:100vh;
+}
+
+.info {
+    float:right;
+    width : 80%;
+    border : 1px solid orange;
+    padding-left:10px;
+    
+}
+
+body footer{
+    bottom:0;
+    max-height:20px;
+    width:100%;
+    border-top : 1px solid orange;
+}
+
+body footer img{
+    height:20px;
+    margin-left: 45%;
+    padding-top:5px;
+}
+
+
+@media screen and (max-width: 1024px){
+    nav {
+        width:100%;
+    }
+    
+    nav li{
+        display:inline-block;
+        width:100px;
+    }
+    
+    .photo{
+        width:200px;
+    }
+    
+    .info{
+        width:99%;
+    }
+    
+    .all{
+        display:table;
+        width:100%;
+    }
+}

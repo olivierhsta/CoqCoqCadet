@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="CoqCoqCadet.css"/>
+        <script type="text/javascript" src="jquery-ui-1.12.1/jquery-3.1.1.min.js"></script>
+        
+        <!-- code issu de http://jqueryui.com/download/ -->
+        <link rel="stylesheet" href="jquery/jquery-ui.css"/>
+        <script src="jquery/jquery-1.12.4.min.js"></script>
+        <script src="jquery/jquery-ui.js"></script>
+        <!-- -->
+        
+        <script>
+            $( function() {
+                $( "#date" ).datepicker();
+            } );
+        </script>
+           <title>CoqCoqCadet - Réservation</title>
+        
+    </head>
+    <body>
+        <div class="background" id="backgroundReservation"></div>
+        <nav>
+            <ul id="full">
+                <li id="coqcoqpoulet"><img id="logo" src="Pictures/logoPoulet.png" alt=""/>  Coq Coq Cadet<span id="arrow">▼</span>
+                    <ul id="dropped">
+                        <li class="dropNavig" id="dropAccueil"><a href="index.html">Accueil</a></li>
+                        <li class="dropNavig" id="dropMenu"><a href="Menu.html">Menu</a></li>
+                        <li class="dropNavig" id="dropReservation"><a href="Reservation.html">Réservation</a></li>
+                        <li class="dropNavig" id="dropPromotions"><a href="Promotions.html">Promotions</a></li>
+                    </ul>
+                </li>
+                <li class="navig" id="accueil"><a href="index.html">Accueil</a></li>
+                <li class="navig" id="menu"><a href="Menu.html">Menu</a></li>
+                <li class="navig active" id="reservation"><a href="Reservation.html">Réservation</a></li>
+                <li class="navig" id="promotions"><a href="Promotions.html">Promotions</a></li>
+            </ul> 
+        </nav>
+        <div class="info">
+            <h1 class="titre">Réservation</h1>
+            <form id="formReservation" method="post" action="http://www.iro.umontreal.ca/~lapalme/ift1005/Exercices/9/echoValeurs.cgi">
+                
+                <span class="question">Nom :</span>
+                <input class="aligned" type="text" name="nom"/>
+                <hr/>
+                
+                <span class="question">Téléphone : </span> 
+                <input class="aligned" type="text" name="telephone" placeholder="ex: (999)999-9999"/>
+                <hr/>
+                
+                <span class="question">Nombre de personnes : </span> 
+                <input class="aligned" type="number" name="nbPersonne" min="1" max="20"/>
+                <hr/>
+                
+                <span class="question">Date : </span> 
+                <input class="aligned" type="text" id="date" name="date" placeholder="MM/JJ/AAAA"/>
+                <span class="question" id="txtHeure">Heure : </span> 
+                <input id="inputHeure1" type="number" name="heure" min="10" max="21"/>
+                <input id="inputHeure2" type="number" name="heure" step="15" min="00" max="50"/>
+                <hr/>
+                
+                <button type="submit" name="envoyer">Terminer</button>
+                <button type="reset">Recommencer</button>
+            </form>
+        </div>
+        
+        <footer>
+            <img src="Pictures/logoPoulet%20BW.png" id="logoFooter" alt="Logo CoqCoqCadet"/>
+            <a href="Auteurs.html" id="auteurs">Auteurs du site</a>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,402 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+html,body {
+    min-height: 100%;
+    margin: 0;
+    color:white;
+}
+
+/*debut NAV*/
+/*texte logo*/
+#coqcoqpoulet{
+    font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+    color:white;
+    font-size: 48px;
+    padding:0px;
+}
+
+/*image logo*/
+img#logo{
+    vertical-align:middle;
+    width:65px;
+    padding-left: 20px;
+}
+
+/*placer les elements de la barre de navigation de ici*/
+.navig{
+    position:absolute;
+    top:22px;
+    padding-left:0;
+    padding-right:0;
+    padding-bottom:5px;
+}
+
+#promotions{
+    right:10px;
+}
+
+#reservation{
+    right:170px;
+}
+
+#menu{
+    right:345px;
+}
+
+#accueil{
+    right:440px;
+}
+/*a de la*/
+
+nav ul li.navig:hover, nav ul li.active{
+    border-bottom:2px solid red;
+}
+
+/*ne pas faire apparetre la fleche*/
+#arrow{
+    display:none;
+}
+
+/*ne pas faire apparetre le menu qui drop*/
+ul#dropped{
+    display:none;
+    padding:0px;
+}
+
+nav{
+    position:fixed;
+    min-height:100px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+nav > ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li{
+    display:inline-block;
+    padding: 10pt;
+    vertical-align: middle;
+    
+}
+
+nav > ul > li a{
+    font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+    font-weight: bold;
+    font-size:22px;
+    color: white;
+    text-decoration: none;
+}
+/*fin NAV*/
+
+/*image de background pour la page d'accueil*/
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    z-index:-1; /*index plus faible que les autres elements (il se placera donc en-dessous des autres)*/
+}
+
+#backgroundPoulet{
+    background-image: url("Pictures/backgroundPoulet.jpeg");
+}
+
+#backgroundMenu{
+    background-image: url("Pictures/backgroundMenu.jpeg");
+}
+
+#backgroundReservation{
+    background-image: url("Pictures/backgroundReservation.jpeg");
+}
+
+#backgroundPromotion{
+    background-image: url("Pictures/backgroundPromotion.jpeg");
+}
+
+/*l'espace dans lequel les information sont placee*/
+/*prend 60% de la page et est place au milieu*/
+.info{
+    display:table;
+    width:60%;
+    height:80vh; /*hauteur de 80% de l'ecran (et non de la page)*/
+    margin:auto;
+    bottom:0;
+    padding-top:125px;
+    padding-bottom:33px;
+    background: rgba(0, 0, 0, 0.5); /*noir et mi-transparent, mais sans que les enfants soient affectes par la transparence*/
+    background-clip:content-box; /*pour que le background-color n'affecte que le contenu (pas le padding)*/
+}
+.description, .prix, .header, .titre, #quicknousjoindre{
+    font-family:arial, helvetica, sans-serif;
+    color:white;
+}
+
+.titre, .top{
+    border-bottom: 3px solid white;
+}
+
+.titre{
+    font-size:5vw;
+    text-align:right;
+    margin:20px;
+    margin-top:0px;
+}
+
+.titre svg{
+    float:left;
+    height:10vw; /*depend du width pcq la hauteur de h1 depend du width*/
+}
+
+#quicknousjoindre{
+    font-weight:normal;
+    font-size:1.5vw;
+    float:left;
+    padding-left:20px;
+    padding-top:5%;
+}
+
+figure{
+    width:50%;
+    margin:auto;
+    padding:0;
+    text-align:center;
+    border:1px solid white;
+}
+
+figure img{
+    width:90%;
+    margin:5%;
+    margin-bottom:5.9px;
+}
+
+figure figcaption{
+    border-top:1px solid white;
+}
+
+#tablePromotion{
+    width:50%;
+    margin:auto;
+}
+
+#tableMenu{
+    width:100%;
+}
+
+.header{
+    padding:20px;
+    font-size:3.5vw;
+    text-align:center;
+}
+
+h2.header{
+    padding:0;
+}
+
+.description{
+    font-size:1.5vw;
+}
+
+.description, .soustitre{
+    text-align:center;
+}
+
+.description strong{
+    font-size:1.8vw;
+}
+
+td.prix{
+    width:20%;
+    text-align:right;
+    padding-right:2%;
+}
+
+td.image{
+    width:40%;
+    padding:10px;
+    padding-top:0px;
+    padding-right:10%;
+}
+
+#tableMenu img{
+    width:100%;
+}
+
+#formReservation{
+    margin:20px;
+}
+
+form span.question{
+    color:white;
+}
+
+form input.aligned{
+    position:absolute;
+    width: 175px;
+    left:37%;
+}
+
+form #txtHeure{
+    position:absolute;
+    left:55%;
+}
+
+form #inputHeure1{
+    position:absolute;
+    width:50px;
+    left:60%;
+}
+
+form #inputHeure2{
+    position:absolute;
+    width:50px;
+    left:66%;
+}
+
+/*dimensions tablettes*/
+@media screen and (max-width: 1024px){
+    /*faire apparaitre la fleche et la placer au milieu de la barre nav*/
+    #arrow{
+        display:block;
+        color: white;
+        font-size:25px;
+        margin:0px;
+        position: absolute;
+        left:48.5%;
+        top: 65px;
+    }
+    
+    /*faire disparaitre les elements de la barre nav > 1035px*/
+    .navig{
+        display:none;
+    }
+    
+    .dropNavig{
+        border:1px solid transparent;
+        margin-left:2px;
+    }
+    
+    .dropNavig:hover{
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid red; 
+        line-height: 0.1em;
+        margin-top: 9.5px;
+        margin-bottom: 9.5px;
+        margin-left: 0;
+     }
+     
+     .dropNavig:hover a{
+        background:red; 
+        padding:0 10px;
+     }
+    
+    ul#full li#coqcoqpoulet{
+        text-align:center;
+        width:100%;
+    }
+    
+    /*faire apparaitre les element du nav quand on passe le curseur par-dessus le logo/fleche*/
+    ul#full li#coqcoqpoulet:hover ul#dropped{
+        display:block;
+        width:300px;
+        margin:auto;
+    }
+    
+    /*ca marchait pas sinon*/
+    ul#full li#coqcoqpoulet:hover ul#dropped li{
+        display:block;
+    }
+    
+    ul#full li#coqcoqpoulet:hover ul#dropped li a{
+        display:block;
+        font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+        font-weight: bold;
+        font-size:22px;
+        color: white;
+        text-decoration: none;
+        text-align:center;
+    }
+    
+    form input.aligned, form #inputHeure1, form #inputHeure2,form #txtHeure{
+        position:static;
+    }
+    
+    img#logo{
+        padding:0;
+    }
+}
+
+
+/*dimension telephone*/
+@media screen and (max-width: 480px){
+    nav{
+        min-height:60px;
+    }
+
+    #coqcoqpoulet{
+        font-size: 32px;
+    }
+    
+    img#logo{
+        width:45px;
+    }
+    
+    #arrow{
+        font-size:12px;
+        top: 45px;
+    }
+    
+    ul#full li#coqcoqpoulet:hover ul#dropped li a{
+        font-size:18px;
+    }
+    
+    ul#full li#coqcoqpoulet:hover ul#dropped{
+        width:100%;
+        padding-left: 0px;
+    }
+    
+    .dropNavig:hover{
+        margin-top:8.1px;
+        margin-bottom:8.1px;
+    }
+    
+    .info{
+        width:75%;
+        padding-top:99px;
+        height:79vh;
+    }
+    
+    .description{
+        font-size:2vw;
+    }
+    
+    
+    .description strong{
+        font-size:2.5vw;
+    }
+}
+
+footer{
+    bottom:0;
+    background: rgba(0, 0, 0, 1);
+    width: 100%;
+    color:white;
+    min-height:40px;
+}
+
+footer #logoFooter{
+    height:40px;
+    margin:10px;
+    margin-left:30px;
+}
+
+footer a#auteurs{
+    margin:22px;
+    float:right;
+}
